@@ -1,0 +1,134 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right,rgb(30, 100, 172),rgb(152, 66, 182));
+  }
+  .login{
+    display: block;
+    background-color: white;
+    margin:100px auto;
+    padding: 20px;
+    width: 300px;
+    height: 500px;
+    border-radius: 20px;
+    text-align: center;
+  }
+  .login input[type="text"]{
+    position: relative;
+    display: block;
+    font-family: sans-serif;
+    float: left;
+    margin: 20px auto;
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid ;
+    outline: inherit;
+    opacity: 0.3;
+  }
+  .formulario-error1{
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+  }
+  .formulario-error1-activo{
+    display: block;
+  }
+  .formulario-error2{
+    font-size: 12px;
+    margin-bottom: 0;
+    display: none;
+  }
+  .formulario-error2-activo{
+    display: block;
+  }
+  .validacion-estado{
+    position:relative;
+    bottom: 55px;
+    left: 140px;
+    z-index: 100;
+    font-size: 16px;
+    opacity: 0;
+  }
+  .mensaje{
+    height: 45px;
+    line-height: 45px;
+    background: #f66060;
+    padding: 0 20px;
+    border-radius: 3px;
+    margin: 20px 10px;
+    display: none;
+  }
+  .mensaje-activo{
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    background: #f66060;
+    padding: 0 10px;
+    border-radius: 3px;
+    margin: 5px 5px;
+  }
+  .login input[type="submit"]{
+    display: block;
+    padding: 20px;
+    color: white;
+    width: 300px;
+    border: none;
+    background-image: linear-gradient(120deg,#3498db,#8e44ad,#3498db);
+    background-size: 200%;
+    cursor: pointer;
+    transition: .5s;
+  }
+  span{
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    padding: 40px;
+  }
+  /*--------------------Efectos*-------------------------*/
+  .login input[type="text"]:focus{
+    opacity: 1;
+    border-bottom: 2px solid;
+  }
+  .login input[type="submit"]:hover{
+    background-position: right;
+  }
+  .login span::before{
+    content: attr(data-placeholder);
+    position: absolute;
+    color: #adadad;
+    z-index: -1;
+    transition: .5s;
+  }
+  .login span::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(120deg,#3498db,#8e44ad);
+    transition: .5s;
+  }
+  .focus + span::before{
+    top: -5px;
+  }
+  .focus + span::after{
+    width: 100%;
+  }
+  /*Estilos Validacion*/
+  .formulario__nombre-correcto .validacion-estado{
+    color: #1ed12d;
+    opacity: 1;
+  }
+  .formulario__nombre-incorrecto .validacion-estado{
+    color: #bb2929;
+    opacity: 1;
+  }
+  .formulario__apellido-correcto .validacion-estado{
+    color: #1ed12d;
+    opacity: 1;
+  }
+  .formulario__apellido-incorrecto .validacion-estado{
+    color: #bb2929;
+    opacity: 1;
+  }
+
+  
